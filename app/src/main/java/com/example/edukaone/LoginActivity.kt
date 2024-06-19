@@ -62,9 +62,10 @@ class LoginActivity : AppCompatActivity() {
             auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
-                        finish()
+                        Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show()
+//                        val intent = Intent(this, MainActivity::class.java)
+//                        startActivity(intent)
+//                        finish()
                     } else {
                         Toast.makeText(this, "Login failed", Toast.LENGTH_SHORT).show()
                     }
@@ -96,9 +97,10 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithCredential(credential)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                    finish()
+                    Toast.makeText(this, "Google sign in successful", Toast.LENGTH_SHORT).show()
+//                    val intent = Intent(this, MainActivity::class.java)
+//                    startActivity(intent)
+//                    finish()
                 } else {
                     Toast.makeText(this, "Google sign in failed", Toast.LENGTH_SHORT).show()
                 }
