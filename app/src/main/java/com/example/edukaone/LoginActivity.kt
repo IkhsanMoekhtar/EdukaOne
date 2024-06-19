@@ -3,7 +3,7 @@ package com.example.edukaone
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -35,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
 
         googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-        val googleSignButton = findViewById<Button>(R.id.googleSignInButton)
+        val googleSignButton = findViewById<View>(R.id.googleSignInButton)
         googleSignButton.setOnClickListener {
             signWithGoogle()
         }
