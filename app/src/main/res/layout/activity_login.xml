@@ -9,7 +9,7 @@
   android:layout_height="match_parent"
   android:background="@drawable/container_log_in"
   android:clipToPadding="false"
-  android:gravity="left|top"
+  android:gravity="top|bottom"
   android:orientation="vertical">
   
   <FrameLayout
@@ -33,7 +33,7 @@
       android:maxLines="1"
       android:singleLine="true"
         android:text="Login"
-      android:textColor="#FF000000"
+      android:textColor="#FFFFFF"
       android:textSize="30dp" />
   </FrameLayout>
   
@@ -44,29 +44,24 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     android:layout_marginTop="32dp">
-    
-    <ImageView
-      android:id="@+id/image_bg"
+
+
+    <EditText
+      android:id="@+id/text_email"
       android:layout_width="match_parent"
       android:layout_height="50dp"
-      android:scaleType="centerCrop"
-      android:src="@drawable/image_bg" />
-    
-    <TextView
-      android:id="@+id/text_email"
-      android:layout_width="wrap_content"
-      android:layout_height="21dp"
-      android:layout_marginLeft="16dp"
-      android:layout_marginTop="-0.5dp"
-      android:layout_marginBottom="-1dp"
       android:layout_gravity="center_vertical"
       android:gravity="left|center_vertical"
       android:includeFontPadding="false"
       android:maxLines="1"
       android:singleLine="true"
-        android:text="Email"
-      android:textColor="#FFBDBDBD"
-      android:textSize="16dp" />
+        android:hint="Email"
+      android:textColor="#91E5AE"
+        android:textColorHint="#91E5AE"
+        android:background="@drawable/image_bg"
+      android:textSize="16dp"
+        android:paddingStart="20dp"/>
+
   </FrameLayout>
   
   <FrameLayout
@@ -81,10 +76,10 @@
       android:id="@+id/image_bg1"
       android:layout_width="match_parent"
       android:layout_height="50dp"
-      android:scaleType="centerCrop"
+      android:scaleType="fitXY"
       android:src="@drawable/image_bg1" />
     
-    <TextView
+    <EditText
       android:id="@+id/text_password"
       android:layout_width="wrap_content"
       android:layout_height="21dp"
@@ -96,9 +91,12 @@
       android:includeFontPadding="false"
       android:maxLines="1"
       android:singleLine="true"
-        android:text="Password"
-      android:textColor="#FFBDBDBD"
-      android:textSize="16dp" />
+        android:hint="Password"
+        android:textColorHint="#91E5AE"
+        android:background="@android:color/transparent"
+      android:textColor="#91E5AE"
+      android:textSize="16dp"
+        android:inputType="textPassword"/>
     
     <TextView
       android:id="@+id/text_show"
@@ -113,77 +111,51 @@
       android:maxLines="1"
       android:singleLine="true"
         android:text="Show"
-      android:textColor="#FF2F656C"
+      android:textColor="#91E5AE"
       android:textSize="16dp" />
   </FrameLayout>
-  
-  <TextView
-    android:id="@+id/text_google_account"
-    android:layout_width="wrap_content"
-    android:layout_height="20dp"
-    android:layout_marginLeft="0dp"
-    android:layout_marginTop="15dp"
-    android:layout_marginBottom="-1dp"
-    android:layout_gravity="center_horizontal"
-    android:gravity="center_horizontal|center_vertical"
-    android:includeFontPadding="false"
-    android:maxLines="1"
-    android:singleLine="true"
-      android:text="Use Google Account"
-    android:textColor="#FF2F656C"
-    android:textSize="15dp" />
 
   <com.google.android.gms.common.SignInButton
       android:id="@+id/sign_in_button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_marginTop="15dp"
       android:layout_gravity="center"/>
+
 
   <TextView
       android:id="@+id/text_sign_out"
       android:layout_width="wrap_content"
       android:layout_height="20dp"
       android:layout_marginLeft="0dp"
-      android:layout_marginTop="32dp"
-      android:layout_marginBottom="-335dp"
-      android:layout_gravity="center_horizontal"
+      android:layout_marginTop="280dp"
+      android:layout_marginBottom="15dp"
+      android:layout_gravity="center_horizontal|bottom"
       android:gravity="center_horizontal|center_vertical"
       android:includeFontPadding="false"
       android:maxLines="1"
       android:singleLine="true"
-      android:text="Sign Out"
-      android:textColor="#FF2F656C"
+      android:text="Sign Up"
+      android:textColor="#91E5AE"
       android:textSize="15dp" />
-  
-  <LinearLayout
-    android:id="@+id/container_button_primary"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
-    android:layout_marginTop="347dp"
-    android:background="@drawable/container_button_primary"
-    android:clipToPadding="false"
-    android:gravity="center_horizontal|top"
-    android:orientation="vertical"
-    android:paddingBottom="15dp"
-    android:paddingLeft="32dp"
-    android:paddingRight="32dp"
-    android:paddingTop="15dp">
-    
-    <TextView
+
+  <TextView
       android:id="@+id/text_log_in1"
-      android:layout_width="wrap_content"
-      android:layout_height="21dp"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
       android:gravity="center_horizontal|center_vertical"
+      android:background="@drawable/container_button_primary"
+      android:layout_gravity="center|bottom"
       android:includeFontPadding="false"
       android:maxLines="1"
       android:singleLine="true"
       android:text="Log In"
-      android:textColor="#FFFFFFFF"
-      android:textSize="16dp" />
-  </LinearLayout>
-  
+      android:textColor="#010B40"
+      android:textSize="15dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginTop="0dp"/>
+
   <TextView
     android:id="@+id/text_forgot_password"
     android:layout_width="wrap_content"
@@ -191,15 +163,14 @@
     android:layout_marginLeft="0dp"
     android:layout_marginTop="15dp"
     android:layout_marginBottom="20dp"
-    android:layout_gravity="center_horizontal"
+    android:layout_gravity="center_horizontal|bottom"
     android:gravity="left|center_vertical"
     android:includeFontPadding="false"
     android:maxLines="1"
     android:singleLine="true"
     android:text="Forgot your password?"
-    android:textColor="#FF2F656C"
+    android:textColor="#91E5AE"
     android:textSize="16dp" />
-
 
 
 </LinearLayout>

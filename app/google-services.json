@@ -1,18 +1,26 @@
 {
   "project_info": {
-    "project_number": "213043147383",
-    "project_id": "edukaone-2df9f",
-    "storage_bucket": "edukaone-2df9f.appspot.com"
+    "project_number": "329251130415",
+    "project_id": "edukaone-1b10f",
+    "storage_bucket": "edukaone-1b10f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:213043147383:android:6efdcb12b386fba1d30c72",
+        "mobilesdk_app_id": "1:329251130415:android:54dfc5e0cc4e95c3afcada",
         "android_client_info": {
           "package_name": "com.example.edukaone"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "329251130415-0f5vdkkqk33m72avjmkargkf80gai62u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edukaone",
+            "certificate_hash": "41227343535ad09c3da5d404232e0c6f79578bf2"
+          }
+        },
         {
           "client_id": "329251130415-e9skvdnjs1nk1duof279a7ibg8vm872q.apps.googleusercontent.com",
           "client_type": 3
@@ -20,14 +28,14 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB0QYm1t35tTJpJb2oLaTXll_e6ZGIMARI"
+          "current_key": "AIzaSyAoZVQNDcOZLGkWqSbnd6kWLmoLjS2wRjU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "213043147383-hhf3cp0rv75tlsmdrve3k8qpnlgk00ck.apps.googleusercontent.com",
+              "client_id": "329251130415-e9skvdnjs1nk1duof279a7ibg8vm872q.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

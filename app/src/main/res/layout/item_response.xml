@@ -2,21 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container_message_receive2"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="0dp"
-    android:layout_marginEnd="40dp"
+    android:layout_marginEnd="70dp"
     android:layout_marginTop="0dp">
 
     <!-- Background untuk bubble -->
     <TextView
         android:id="@+id/text_message_receive"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="0dp"
         android:layout_marginTop="14dp"
         android:layout_marginBottom="14dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="0dp"
         android:gravity="start|top"
         android:includeFontPadding="true"
         android:padding="10dp"

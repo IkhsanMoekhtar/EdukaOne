@@ -5,6 +5,7 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.util.Patterns
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -29,6 +30,7 @@ import com.google.android.libraries.identity.googleid.GoogleIdTokenParsingExcept
 import com.google.firebase.Firebase
 import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.auth
@@ -51,12 +53,67 @@ class LoginActivity : AppCompatActivity() {
         binding.signInButton.setOnClickListener {
             signIn()
         }
+
+        // Set up login button click listener
+        binding.textLogIn1.setOnClickListener {
+            val email = binding.textEmail.text.toString().trim()
+            val password = binding.textPassword.text.toString().trim()
+            if (validateInput(email, password)) {
+                loginUser(email, password)
+            }
+        }
+
+        binding.textSignOut.setOnClickListener {
+            startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
+        }
     }
 
     override fun onStart() {
         super.onStart()
         val currentUser = auth.currentUser
         updateUI(currentUser)
+    }
+
+    private fun loginUser(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    Log.d(TAG, "signInWithEmail:success")
+                    val user = auth.currentUser
+                    updateUI(user)
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w(TAG, "signInWithEmail:failure", task.exception)
+                    handleSignInFailure(task.exception)
+                }
+            }
+    }
+
+    private fun validateInput(email: String, password: String): Boolean {
+        return when {
+            email.isEmpty() -> {
+                binding.textEmail.error = "Email is required"
+                binding.textEmail.requestFocus()
+                false
+            }
+            !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
+                binding.textEmail.error = "Enter a valid email"
+                binding.textEmail.requestFocus()
+                false
+            }
+            password.isEmpty() -> {
+                binding.textPassword.error = "Password is required"
+                binding.textPassword.requestFocus()
+                false
+            }
+            password.length < 6 -> {
+                binding.textPassword.error = "Password should be at least 6 characters"
+                binding.textPassword.requestFocus()
+                false
+            }
+            else -> true
+        }
     }
 
     private fun signIn() {
@@ -80,6 +137,18 @@ class LoginActivity : AppCompatActivity() {
                 Log.d("Error", e.message.toString())
             }
         }
+    }
+
+    private fun handleSignInFailure(exception: Exception?) {
+        when (exception) {
+            is FirebaseAuthInvalidCredentialsException -> {
+                Toast.makeText(baseContext, "Invalid email or password.", Toast.LENGTH_SHORT).show()
+            }
+            else -> {
+                Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
+            }
+        }
+        Log.e(TAG, "Authentication failed: ${exception?.message}")
     }
 
     private fun handleSignIn(result: GetCredentialResponse) {

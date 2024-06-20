@@ -7,7 +7,7 @@
     android:id="@+id/container_sign_up"
     android:layout_width="match_parent"
     android:layout_height="812dp"
-    android:background="@drawable/container_sign_up"
+    android:background="@drawable/container_log_in"
     android:clipToPadding="false"
     android:gravity="left|top"
     android:orientation="vertical">
@@ -32,7 +32,7 @@
             android:maxLines="1"
             android:singleLine="true"
             android:text="Login"
-            android:textColor="#FF2F656C"
+            android:textColor="#91E5AE"
             android:textSize="16dp" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:maxLines="1"
             android:singleLine="true"
             android:text="Sign Up"
-            android:textColor="#FF000000"
+            android:textColor="#FFFFFF"
             android:textSize="30dp" />
 
     </FrameLayout>
@@ -65,7 +65,7 @@
             android:id="@+id/image_bg"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             android:src="@drawable/image_bg" />
 
         <TextView
@@ -81,7 +81,7 @@
             android:maxLines="1"
             android:singleLine="true"
             android:text="Name"
-            android:textColor="#FFBDBDBD"
+            android:textColor="#91E5AE"
             android:textSize="16dp" />
     </FrameLayout>
 
@@ -97,7 +97,7 @@
             android:id="@+id/image_bg1"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitXY"
             android:src="@drawable/image_bg1" />
 
         <TextView
@@ -113,7 +113,7 @@
             android:maxLines="1"
             android:singleLine="true"
             android:text="Email"
-            android:textColor="#FFBDBDBD"
+            android:textColor="#91E5AE"
             android:textSize="16dp" />
     </FrameLayout>
 
@@ -129,8 +129,8 @@
             android:id="@+id/image_bg2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/image_bg2" />
+            android:scaleType="fitXY"
+            android:src="@drawable/image_bg1" />
 
         <EditText
             android:id="@+id/edit_password"
@@ -139,7 +139,7 @@
             android:layout_weight="1"
             android:inputType="textPassword"
             android:hint="Password"
-            android:textColorHint="#FFBDBDBD"
+            android:textColorHint="#91E5AE"
             android:textSize="16sp" />
 
         <TextView
@@ -148,47 +148,13 @@
             android:layout_height="match_parent"
             android:layout_gravity="end|center_vertical"
             android:gravity="center_vertical|end"
+            android:layout_marginEnd="10dp"
             android:text="Show"
-            android:textColor="#FF2F656C"
+            android:textColor="#91E5AE"
             android:textSize="16sp" />
     </FrameLayout>
 
-    <FrameLayout
-        android:id="@+id/container_checkbox_option_empty"
-        android:layout_width="match_parent"
-        android:layout_height="17dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="32dp">
 
-        <FrameLayout
-            android:id="@+id/image_checkbox_empty"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:layout_marginTop="0.5dp"
-            android:layout_gravity="top|left">
-
-            <CheckBox
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:background="@drawable/drawable_shape"
-                android:scaleType="centerInside" />
-        </FrameLayout>
-
-        <TextView
-            android:id="@+id/text_newsletter_promo_info"
-            android:layout_width="match_parent"
-            android:layout_height="34dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginRight="-1dp"
-            android:layout_gravity="top"
-            android:gravity="left|top"
-            android:includeFontPadding="false"
-            android:lineHeight="16.94dp"
-            android:text="I would like to receive your newsletter and other promotional information."
-            android:textColor="#FF666666"
-            android:textSize="14dp" />
-    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/btn_primary"
@@ -196,8 +162,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="270dp"
-        android:background="@drawable/btn_primary"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/container_button_primary"
         android:clipToPadding="false"
         android:gravity="center_horizontal|top"
         android:orientation="vertical"
@@ -215,23 +181,9 @@
             android:maxLines="1"
             android:singleLine="true"
             android:text="Sign Up"
-            android:textColor="#FFFFFFFF"
+            android:textColor="#010B40"
             android:textSize="16dp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/text_forgot_password"
-        android:layout_width="wrap_content"
-        android:layout_height="21dp"
-        android:layout_marginLeft="0.5dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="20dp"
-        android:layout_gravity="center_horizontal"
-        android:gravity="left|center_vertical"
-        android:includeFontPadding="false"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:text="Forgot your password?"
-        android:textColor="#FF2F656C"
-        android:textSize="16dp" />
+
 </LinearLayout>

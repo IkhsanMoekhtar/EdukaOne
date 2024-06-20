@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="gradient_color_start">#010B40</color> <!-- Warna awal gradient -->
+    <color name="gradient_color_end">#031DA6</color> <!-- Warna akhir gradient -->
 
+    <!-- Menentukan gradient color menggunakan <gradient> -->
+    <drawable name="gradient_background">
+        <gradient
+            android:startColor="@color/gradient_color_start"
+            android:endColor="@color/gradient_color_end"
+            android:angle="45" /> <!-- Sudut gradient, misalnya 45 derajat -->
+    </drawable>
 </resources>
