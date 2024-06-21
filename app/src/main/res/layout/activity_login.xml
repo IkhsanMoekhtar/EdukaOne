@@ -49,7 +49,7 @@
     <EditText
       android:id="@+id/text_email"
       android:layout_width="match_parent"
-      android:layout_height="50dp"
+      android:layout_height="match_parent"
       android:layout_gravity="center_vertical"
       android:gravity="left|center_vertical"
       android:includeFontPadding="false"
@@ -81,11 +81,8 @@
     
     <EditText
       android:id="@+id/text_password"
-      android:layout_width="wrap_content"
-      android:layout_height="21dp"
-      android:layout_marginLeft="16dp"
-      android:layout_marginTop="-0.5dp"
-      android:layout_marginBottom="-1dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
       android:layout_gravity="center_vertical"
       android:gravity="left|center_vertical"
       android:includeFontPadding="false"
@@ -96,7 +93,8 @@
         android:background="@android:color/transparent"
       android:textColor="#91E5AE"
       android:textSize="16dp"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:paddingStart="20dp"/>
     
     <TextView
       android:id="@+id/text_show"

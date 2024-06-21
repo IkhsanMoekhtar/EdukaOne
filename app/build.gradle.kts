@@ -59,6 +59,9 @@ dependencies {
     implementation(libs.androidx.credentials.play.services.auth)
 
     implementation ("androidx.credentials:credentials-play-services-auth:1.2.2")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
+    implementation ("androidx.core:core-ktx:1.7.0")
 
 
 }

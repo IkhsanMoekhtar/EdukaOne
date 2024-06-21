@@ -2,6 +2,8 @@ package com.example.edukaone
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.util.Patterns
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -15,6 +17,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
     private lateinit var auth: FirebaseAuth
+    private var isPasswordVisible: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +40,22 @@ class RegisterActivity : AppCompatActivity() {
         binding.textLogin.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
+        }
+
+        // Set up show password text view listener
+        binding.textShow.setOnClickListener {
+            if (isPasswordVisible) {
+                // Hide Password
+                binding.editPassword.transformationMethod = PasswordTransformationMethod.getInstance()
+                binding.textShow.text = "Show"
+            } else {
+                // Show Password
+                binding.editPassword.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                binding.textShow.text = "Hide"
+            }
+            isPasswordVisible = !isPasswordVisible
+            // Move the cursor to the end of the text
+            binding.editPassword.setSelection(binding.editPassword.text.length)
         }
     }
 

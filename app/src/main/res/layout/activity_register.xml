@@ -54,67 +54,28 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/container_input_text"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="32dp">
-
-        <ImageView
-            android:id="@+id/image_bg"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/image_bg" />
-
-        <TextView
-            android:id="@+id/text_name"
-            android:layout_width="wrap_content"
-            android:layout_height="21dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="-0.5dp"
-            android:layout_marginBottom="-1dp"
-            android:layout_gravity="center_vertical"
-            android:gravity="left|center_vertical"
-            android:includeFontPadding="false"
-            android:maxLines="1"
-            android:singleLine="true"
-            android:text="Name"
-            android:textColor="#91E5AE"
-            android:textSize="16dp" />
-    </FrameLayout>
-
-    <FrameLayout
         android:id="@+id/container_input_text1"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="50dp">
 
-        <ImageView
-            android:id="@+id/image_bg1"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/image_bg1" />
-
-        <TextView
+        <EditText
             android:id="@+id/text_email"
-            android:layout_width="wrap_content"
-            android:layout_height="21dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="-0.5dp"
-            android:layout_marginBottom="-1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:gravity="left|center_vertical"
             android:includeFontPadding="false"
             android:maxLines="1"
             android:singleLine="true"
-            android:text="Email"
             android:textColor="#91E5AE"
-            android:textSize="16dp" />
+            android:hint="Email"
+            android:textColorHint="#91E5AE"
+            android:textSize="16dp"
+            android:background="@drawable/image_bg1"
+            android:paddingStart="20dp"/>
     </FrameLayout>
 
     <FrameLayout
@@ -125,22 +86,22 @@
         android:layout_marginRight="16dp"
         android:layout_marginTop="16dp">
 
-        <ImageView
-            android:id="@+id/image_bg2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/image_bg1" />
-
         <EditText
             android:id="@+id/edit_password"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:gravity="left|center_vertical"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:singleLine="true"
             android:inputType="textPassword"
             android:hint="Password"
             android:textColorHint="#91E5AE"
-            android:textSize="16sp" />
+            android:textColor="#91E5AE"
+            android:textSize="16sp"
+            android:background="@drawable/image_bg1"
+            android:paddingStart="20dp"/>
 
         <TextView
             android:id="@+id/text_show"
@@ -152,6 +113,7 @@
             android:text="Show"
             android:textColor="#91E5AE"
             android:textSize="16sp" />
+
     </FrameLayout>
 
 
@@ -162,7 +124,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="380dp"
         android:background="@drawable/container_button_primary"
         android:clipToPadding="false"
         android:gravity="center_horizontal|top"

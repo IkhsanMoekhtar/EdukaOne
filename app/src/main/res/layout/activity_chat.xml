@@ -31,30 +31,40 @@
       <ImageButton
           android:id="@+id/overflow_menu_button"
           android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
+          android:layout_height="35dp"
           android:src="@drawable/more_icon"
+          android:scaleType="centerCrop"
           android:contentDescription="@string/menu"
           android:background="?attr/selectableItemBackgroundBorderless"
           android:clickable="true"
           android:focusable="true"
           android:layout_alignParentEnd="true"
-          android:layout_marginEnd="12dp"
-          android:layout_marginTop="30dp"/>
+          android:layout_marginEnd="10dp"
+          android:layout_marginTop="35dp"/>
+
+      <ImageView
+          android:layout_width="100dp"
+          android:layout_height="match_parent"
+          android:src="@drawable/drawable_image"
+          android:layout_marginTop="25dp"
+          android:layout_marginBottom="10dp"/>
 
       <TextView
           android:id="@+id/text_eduka_one"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:layout_marginStart="20dp"
-          android:layout_marginTop="30dp"
+          android:layout_marginStart="90dp"
+          android:layout_marginTop="40dp"
           android:layout_gravity="start|top"
           android:gravity="start|center_vertical"
           android:includeFontPadding="false"
           android:maxLines="1"
           android:singleLine="true"
           android:text="EdukaOne"
+          android:textStyle="bold"
           android:textColor="#15062D"
           android:textSize="20sp" />
+
 
       <LinearLayout
           android:layout_width="match_parent"

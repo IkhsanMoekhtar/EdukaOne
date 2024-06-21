@@ -4,6 +4,8 @@ package com.example.edukaone
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.HideReturnsTransformationMethod
+import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import android.util.Patterns
 import android.widget.Button
@@ -42,6 +44,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var binding: ActivityLoginBinding
+    private var isPasswordVisible: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +68,22 @@ class LoginActivity : AppCompatActivity() {
 
         binding.textSignOut.setOnClickListener {
             startActivity(Intent(this@LoginActivity, RegisterActivity::class.java))
+        }
+
+        // Set up show password text view listener
+        binding.textShow.setOnClickListener {
+            if (isPasswordVisible) {
+                // Hide Password
+                binding.textPassword.transformationMethod = PasswordTransformationMethod.getInstance()
+                binding.textShow.text = "Show"
+            } else {
+                // Show Password
+                binding.textPassword.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                binding.textShow.text = "Hide"
+            }
+            isPasswordVisible = !isPasswordVisible
+            // Move the cursor to the end of the text
+            binding.textPassword.setSelection(binding.textPassword.text.length)
         }
     }
 
